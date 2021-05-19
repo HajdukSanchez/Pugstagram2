@@ -1,11 +1,33 @@
+<script>
+  export let comments = [];
+
+  function addComment(event) {
+    const msg = event.target.text.value;
+    if (msg.length > 3) {
+      // This is the structure of the API for comments
+      const message = {
+        id: Date.now(),
+        text: msg,
+        username: "HajdukSanchez",
+      };
+      comments = [...comments, message]; // we add the before structure and we added the new one
+      event.target.text.value = ""; // Reset the input value
+    }
+  }
+</script>
+
 <div class="Comments">
   <div class="Comments-content">
-    <div class="Comments-users">
-      <h3>Crispeta</h3>
-      <span>Hola Elmo</span>
-    </div>
+    <!-- Our element need an ID element -->
+    {#each comments as comment (comment.id)}
+      <div class="Comments-users">
+        <h3>{comment.username}</h3>
+        <span>{comment.text}</span>
+      </div>
+    {/each}
     <div class="Comments-add">
-      <form>
+      <!-- Prevent default "prevent" the normal behaviour of the element -->
+      <form on:submit|preventDefault={addComment}>
         <input type="text" placeholder="Add comment..." id="text" />
         <button type="submit">Post</button>
       </form>

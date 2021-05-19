@@ -6,7 +6,7 @@
   import Timeline from "../components/Timeline.svelte";
   import Sidebar from "../components/Sidebar.svelte";
 
-  const data = {};
+  let data = {};
   const API = "https://us-central1-pugstagram-co.cloudfunctions.net/data";
 
   onMount(async () => {
@@ -18,7 +18,7 @@
 <Header />
 <Main>
   <Timeline posts={data.posts} />
-  <Sidebar {...data.user} />
+  <Sidebar />
   <!-- <Sidebar {...data.user} /> -->
 </Main>
 

@@ -1,5 +1,6 @@
 <script>
   import Card from "./Card.svelte";
+  import Loader from "./Loader.svelte";
 
   export let posts = [];
 </script>
@@ -9,7 +10,7 @@
     {#each posts as post}
       <Card {...post} />
     {:else}
-      <p>Loading...</p>
+      <Loader />
     {/each}
   </div>
 </div>
