@@ -6,8 +6,18 @@
 
 <div class="Sidebar">
   <div class="Sidebar-container">
-    <Profile></Profile>
-    <Stories></Stories>
-    <Footer></Footer>
+    <Profile />
+    <Stories />
+    <Footer />
   </div>
 </div>
+
+<style>
+  .Sidebar {
+    position: relative;
+    padding: 4.5em 0 0 0;
+  }
+  .Sidebar-container {
+    position: fixed;
+  }
+</style>
