@@ -5,13 +5,19 @@
 <head>
   <meta charset='UTF-8'>
   <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-  <meta name='robots' content='index,follow'>
-  <meta name='description' content='Svelte pugstagram'>
-  <title>Pugstagram | Svelte Platzi</title>
+  <!-- Added the base of the project -->
+  %sapper.base%
+  <!-- Added the styles of the project -->
+  %sapper.styles%
+  <!-- We can add dynamic titles and meta -->
+  %sapper.head%
 </head>
 
 <body>
-  <main></main>
+  <!-- We can add dynamic html -->
+  <app>%sapper.html%</app>
+  <!-- We can add dynamic Scripts -->
+  %sapper.scripts%
 </body>
 <script src="https://kit.fontawesome.com/e0c4960065.js" crossorigin="anonymous"></script>
 
