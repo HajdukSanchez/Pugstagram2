@@ -129,3 +129,8 @@ tmp/
 temp/
 
 # End of https://www.toptal.com/developers/gitignore/api/node
+
+# Se need to ignore the node_modules directory that sapper create for us
+#sapper
+src/node_modules
+__sapper__
