@@ -15,7 +15,6 @@
   });
 </script>
 
-<Header />
 <Main>
   <Timeline posts={data.posts} />
   <Sidebar />
