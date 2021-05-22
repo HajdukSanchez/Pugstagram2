@@ -1,14 +1,19 @@
 <script>
   import { likeCount } from "./../store/store.js";
+  import { goto } from "@sapper/app";
 
   export let segment;
+
+  const navigateHome = async () => {
+    await goto("/"); // The final redirect path
+  };
 </script>
 
 <div class="Header">
   <div class="Header-container">
     <div class="Header-content">
       <div class="Header-logo">
-        <h1>Pugstargram</h1>
+        <h1 on:click={navigateHome}>Pugstargram</h1>
       </div>
       <div class="Header-nav">
         <ul>
@@ -18,8 +23,8 @@
           </li>
           <li>
             <!-- This profile name is the name of the component profile.svlete -->
-            <a href="profile" aria-current={segment === "profile" ? "page" : undefined}>
-              <i class="far fa-user" />
+            <a href="profile" aria-current={segment === "profile" ? "page" : undefined} rel="prefecth">
+              <i class="fas fa-user" />
             </a>
           </li>
         </ul>
